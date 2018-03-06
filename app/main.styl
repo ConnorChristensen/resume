@@ -1,0 +1,199 @@
+@import 'breakpoints'
+
+DarkBlue = #2A363B
+Green = #00B36E
+TextGrey = #333333
+BackgroundBlack = rgba(0,0,0,0.63)
+
+ContentMaxWidth = 900px
+
+*
+  box-sizing border-box
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+html body
+  margin 0
+  padding 0
+  font-family 'Arial', sans-serif
+  p
+    line-height 1.4
+
+body>div
+  width 100vw
+  min-height 50px
+
+#about, #projects, #experience, #work
+  padding 20px
+
+#about, #projects
+  background white
+
+#links, #experience
+  background DarkBlue
+
+#work
+  background Green
+
+#banner
+  background url(images/lights.jpg) no-repeat center center
+  height 600px
+  display flex
+  align-items center
+  justify-content center
+  div
+    background BackgroundBlack
+    text-align center
+    color white
+    max-width 500px
+    width 80vw
+    padding 15px
+    border 1px solid #707070
+    p
+      padding 15px
+    hr
+      width 80%
+
+#links
+  display flex
+  align-items center
+  justify-content center
+  div
+    +less-than(tablet)
+      a
+        display block
+        text-align center
+        padding 10px 0
+    +greater-than(tablet)
+      display flex
+      min-width 300px
+      width 60vw
+      max-width 900px
+      align-items center
+      justify-content space-around
+    a
+      color white
+      font-size 13pt
+      transition color .5s
+      &:hover
+        color Green
+        transition color .5s
+
+#about
+  max-width ContentMaxWidth
+  width 80vw
+  margin auto
+  +less-than(tablet)
+    h2
+      text-align center
+  .inline
+    +less-than(tablet)
+      #aboutImage
+        text-align center
+    +greater-than(tablet)
+      display grid
+      grid-template-areas "text image"
+      grid-template-columns 2fr 1fr
+      align-items center
+      justify-items center
+      #aboutDescription
+        grid-area text
+      #aboutImage
+        grid-area image
+        height 200px
+        width 200px
+        img
+          border-radius 50%
+
+
+#experience
+  color white
+  text-align center
+  #honorable
+    table
+      background white
+      color TextGrey
+      width 100%
+      max-width ContentMaxWidth
+      margin auto
+      td
+        padding 15px 0
+        width 33%
+  #programming
+    display grid
+    max-width ContentMaxWidth
+    margin auto
+    +greater-than(mobile)
+      grid-gap 30px
+      grid-template-columns 1fr 1fr 1fr
+      grid-template-areas "ui front work" "graphics front back"
+    +less-than(mobile)
+      grid-gap 10px
+      grid-template-columns 1fr
+      grid-template-areas "front" "ui" "work" "graphics" "back"
+      max-width 250px
+    table
+      background white
+      color black
+      width 100%
+      height 100%
+      padding 30px 0
+      td
+        height 30px
+        color TextGrey
+    #back
+      grid-area back
+    #graphics
+      grid-area graphics
+    #front
+      grid-area front
+    #ui
+      grid-area ui
+    #flow
+      grid-area work
+
+#work
+  h2
+    text-align center
+  #jobs
+    display grid
+    +greater-than(tablet) {
+      grid-template-columns 1fr 1fr
+      max-width 900px
+    }
+    +less-than(tablet) {
+      max-width 500px
+    }
+    grid-gap 20px
+    margin auto
+    .job
+      color white
+      padding 20px
+      background BackgroundBlack
+      p
+        color white
+        font-size 11pt
+      table
+        width 100%
+        td:last-child
+          text-align right
+
+
+#projects
+  h2
+    text-align center
+  div
+    margin 40px auto
+    padding 20px 0
+    background #dddddd
+    max-width 1000px
+    p
+      padding 0 15px
+    img
+      display block
+      margin auto
+      width 95%
+    .explination
+      max-width 400px
+      padding 0
+      margin auto

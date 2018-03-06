@@ -1,0 +1,10 @@
+{
+   "root": "app",
+   "end":  "dist",
+   "folders": {
+      "html": "**",
+      "css":  "**",
+      "js":   "**",
+      "images": "resources/images"
+   }
+}

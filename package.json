@@ -1,0 +1,30 @@
+{
+  "name": "",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp test; karma start --single-run"
+  },
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "config.json": "^0.0.4",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-flatten": "^0.3.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-print": "^2.0.1",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
+    "minimatch": "^3.0.4"
+  },
+  "version": "1.0.0",
+  "description": "A small project containing barebones code for building a web project",
+  "main": "index.js",
+  "repository": "",
+  "author": [],
+  "license": ""
+}
