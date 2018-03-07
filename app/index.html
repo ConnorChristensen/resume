@@ -371,7 +371,7 @@
     var modified = "This page was last modified on: "
     var date = new Date(document.lastModified)
     var modifiedTag = document.getElementById('lastModified')
-    modifiedTag.innerHTML = modified + intMonthToName(date.getMonth()) + " " + date.getDay() + ", " + date.getFullYear()
+    modifiedTag.innerHTML = modified + intMonthToName(date.getMonth()) + " " + date.getDate() + ", " + date.getFullYear()
 </script>
 
 </html>
